@@ -1,0 +1,51 @@
+{
+  "jobs": [
+    { "src": "1738898179451-b5fc497f9f8e", "out": "hero/invitation-suite", "w": 900, "h": 1200, "alt": "Printed wedding invitation cards and envelopes on a table" },
+    { "src": "1718670013988-c6e3edb92345", "out": "hero/business-cards", "w": 1000, "h": 750, "alt": "Premium printed business cards on a table" },
+    { "src": "1658863025658-4a259cc68fc9", "out": "hero/brochures", "w": 1000, "h": 750, "alt": "Printed brochures and paper samples arranged on a surface" },
+    { "src": "1758183961426-88d64eb5f787", "out": "hero/printing-press", "w": 1600, "h": 560, "alt": "Printing press with coloured ink rollers inside a print studio" },
+    { "src": "1758183961426-88d64eb5f787", "out": "services/all-printing", "w": 1000, "h": 750, "alt": "Industrial printing press used for all types of printing" },
+
+    { "src": "1634630563477-cff9c433c608", "out": "services/photo-frames", "w": 1000, "h": 750, "alt": "Customised photo frame placed beside a flower vase" },
+    { "src": "1769142726489-6f40b1c575c5", "out": "services/id-cards", "w": 1000, "h": 750, "alt": "Printed identity cards attached to lanyards" },
+    { "src": "1522142833700-f16d02b9e7da", "out": "services/wedding-cards", "w": 1000, "h": 750, "alt": "Elegant wedding invitation card printed on premium paper" },
+    { "src": "1769893715447-8f12c382e49c", "out": "services/pamphlets", "w": 1000, "h": 750, "alt": "Folded pamphlets and promotional leaflets stacked together" },
+    { "src": "1695634621121-691d54259d37", "out": "services/brochures", "w": 1000, "h": 750, "alt": "Folded professional brochure with printed artwork" },
+    { "src": "1718670013921-2f144aba173a", "out": "services/visiting-cards", "w": 1000, "h": 750, "alt": "Set of premium visiting cards on a marble surface" },
+    { "src": "1559613671-dfe2fb6a7680", "out": "services/banners-posters", "w": 1000, "h": 750, "alt": "Large printed advertising banners and posters on a building" },
+    { "src": "1595981234058-a9302fb97229", "out": "services/photo-printing", "w": 1000, "h": 750, "alt": "Quality printed photographs spread on a table" },
+    { "src": "1616241673111-508b4662c707", "out": "services/gift-articles", "w": 1000, "h": 750, "alt": "Customised printed mug gift article" },
+    { "src": "1540651810471-5699df74834f", "out": "services/stickers-labels", "w": 1000, "h": 750, "alt": "Assorted custom printed stickers and labels" },
+    { "src": "1693031630369-bd429a57f115", "out": "services/flex-vinyl", "w": 1000, "h": 750, "alt": "Large format flex banner being printed on an industrial printer" },
+
+    { "src": "1750537735437-847075c29538", "out": "about/studio", "w": 1100, "h": 825, "alt": "Colourful printing paper stacks inside a printing studio" },
+
+    { "src": "1740511310608-f6c09a9cb437", "out": "wedding/invitation-large", "w": 1600, "h": 1000, "alt": "Traditional Indian wedding invitation card in detail" },
+    { "src": "1740511361777-a04c371fc986", "out": "wedding/traditional", "w": 700, "h": 700, "alt": "Traditional Indian wedding card with ornate design" },
+    { "src": "1632610992723-82d7c212f6d7", "out": "wedding/modern", "w": 700, "h": 700, "alt": "Modern wedding stationery with matching envelope" },
+    { "src": "1770757685390-ecdfac51d95e", "out": "wedding/gold", "w": 700, "h": 700, "alt": "Premium wedding invitation with golden detailing" },
+    { "src": "1741893043659-ca8b82a8b637", "out": "wedding/envelope", "w": 700, "h": 700, "alt": "Wedding invitation suite arranged on fabric" },
+
+    { "src": "1593499881934-2a652f450a85", "out": "business/letterhead", "w": 800, "h": 600, "alt": "Printed letterhead and office stationery" },
+    { "src": "1695634621375-0b66a9d5d1bc", "out": "business/flyer", "w": 800, "h": 600, "alt": "Printed flyer with folded design" },
+    { "src": "1614036634955-ae5e90f9b9eb", "out": "business/label", "w": 800, "h": 600, "alt": "Custom printed product label on packaging" },
+    { "src": "1572700433449-72c797656fe5", "out": "business/poster", "w": 800, "h": 600, "alt": "Printed promotional poster mounted on a wall" },
+
+    { "src": "1727154085760-134cc942246e", "out": "gifts/keychain", "w": 800, "h": 600, "alt": "Customised metal keychain gift" },
+    { "src": "1549465220-1a8b9238cd48", "out": "gifts/personalized", "w": 800, "h": 600, "alt": "Wrapped personalised gift box" },
+    { "src": "1625708458528-802ec79b1ed8", "out": "gifts/bottle", "w": 800, "h": 600, "alt": "Printed personalised bottles" },
+    { "src": "1674620213535-9b2a2553ef40", "out": "gifts/corporate", "w": 800, "h": 600, "alt": "Corporate gift boxes with printed branding" },
+
+    { "src": "1508004680771-708b02aabdc0", "out": "gallery/frame-hand", "w": 1400, "h": 1050, "alt": "Photo frame held in hand" },
+    { "src": "1599652521984-8bebed0580b7", "out": "gallery/frame-table", "w": 1400, "h": 1050, "alt": "Photo frame placed on a wooden table" },
+    { "src": "1551225471-e45c367f3b89", "out": "gallery/photo-collage", "w": 1400, "h": 1050, "alt": "Photo collage of printed pictures on a wall" },
+    { "src": "1531845116688-48819b3b68d9", "out": "gallery/portrait-prints", "w": 1400, "h": 1050, "alt": "Printed portrait photographs" },
+    { "src": "1644165571949-3455b964db98", "out": "gallery/posters-room", "w": 1400, "h": 1050, "alt": "Wall covered with printed posters" },
+    { "src": "1581079289196-67865ea83118", "out": "gallery/color-swatches", "w": 1400, "h": 1050, "alt": "Colour swatch fan deck for print colour matching" },
+    { "src": "1715154470884-1c2be0b0129f", "out": "gallery/cmyk-chart", "w": 1400, "h": 1050, "alt": "CMYK colour calibration chart used in printing" },
+    { "src": "1769029269011-b32f787c288c", "out": "gallery/id-badge", "w": 1400, "h": 1050, "alt": "Printed ID badge card" },
+    { "src": "1509583401324-1ad8e3dff429", "out": "gallery/leaflet", "w": 1400, "h": 1050, "alt": "Colourful printed leaflet held in hand" },
+    { "src": "1503694978374-8a2fa686963a", "out": "gallery/printing-machine", "w": 1400, "h": 1050, "alt": "Printing machine in a print studio" },
+    { "src": "1625768376503-68d2495d78c5", "out": "gallery/sticker-wall", "w": 1400, "h": 1050, "alt": "Assorted custom stickers displayed on a wall" }
+  ]
+}

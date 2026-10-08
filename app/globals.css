@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans:
+    var(--font-google-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-google-sans), ui-sans-serif, system-ui, sans-serif;
+
+  /* =============================================================
+   * DARK + GOLD design system
+   *   canvas    — near-black page background
+   *   surface   — card / panel surfaces (raised above canvas)
+   *   line      — hairline borders
+   *   ink       — 950 brightest (headings) → 500 muted text
+   *   brand/gold— the gold accent (bright on dark)
+   *   royal     — deeper bronze for glows
+   * .bg-brand-gradient is the GOLD action gradient (dark text on top).
+   * ============================================================= */
+  --color-canvas: #0a0a09;
+  --color-surface: #141412;
+  --color-surface-2: #1b1a16;
+  --color-line: #2b2924;
+
+  --color-ink-950: #f8f7f2;
+  --color-ink-900: #eae8e1;
+  --color-ink-700: #b4b0a5;
+  --color-ink-500: #8a867d;
+
+  /* Gold accent — brand ramp (dark tints low, bright gold high) */
+  --color-brand-50: #17130a;
+  --color-brand-100: #1e190b;
+  --color-brand-200: #3d3316;
+  --color-brand-300: #e9c75f;
+  --color-brand-400: #f3d373;
+  --color-brand-500: #eab308;
+  --color-brand-600: #d8a520;
+  --color-brand-700: #cfa236;
+  --color-brand-800: #b08a2e;
+  --color-brand-900: #4a3a0a;
+  --color-brand-950: #2b2106;
+
+  /* Deeper bronze — glows and dark gradients */
+  --color-royal-50: #171207;
+  --color-royal-100: #201a0b;
+  --color-royal-200: #fbe188;
+  --color-royal-300: #f5cd47;
+  --color-royal-400: #eeb614;
+  --color-royal-500: #d9a406;
+  --color-royal-600: #b8860b;
+  --color-royal-700: #91650a;
+  --color-royal-800: #6d4b0b;
+  --color-royal-900: #2b1e05;
+
+  /* Gold, direct name (50–100 are dark tints, 200+ stay bright) */
+  --color-gold-50: #17130a;
+  --color-gold-100: #1e190b;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #f7c948;
+  --color-gold-500: #eab308;
+  --color-gold-600: #d8a520;
+  --color-gold-700: #cfa236;
+  --color-gold-800: #9a7712;
+  --color-gold-900: #4a3a0a;
+  --color-gold-950: #2b2106;
+
+  --color-wa: #25d366;
+
+  --shadow-soft: 0 24px 50px -30px rgba(0, 0, 0, 0.85);
+  --shadow-lift: 0 32px 70px -34px rgba(0, 0, 0, 0.95);
+
+  --animate-pulse-ring: pulse-ring 2.6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 18px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink-900);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-gold-500);
+  color: var(--color-ink-950);
+}
+
+/* Gold sweep for key headings */
+.text-gradient {
+  background-image: linear-gradient(100deg, #f7d264, #eab308);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* GOLD action gradient — primary buttons, icon tiles, active pills,
+   and the CTA band. The unlayered `color` beats Tailwind's layered
+   text utilities, so text on this gradient is always near-black. */
+.bg-brand-gradient {
+  background-image: linear-gradient(100deg, #f6d166, #d9a307);
+  color: #100f0a;
+}
+
+/* Soft gold wash behind light-ish sections */
+.bg-brand-gradient-soft {
+  background-image: linear-gradient(
+    120deg,
+    rgba(234, 179, 8, 0.07),
+    rgba(216, 165, 20, 0.05)
+  );
+}
+
+/* Soft decorative glow behind hero and CTA sections */
+.glow {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Hero backdrop: slow Ken Burns drift so the background feels alive —
+   the lightweight equivalent of an animated GIF background. */
+@keyframes hero-drift {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.08) translate3d(-1.5%, -1.5%, 0);
+  }
+}
+.hero-bg-motion {
+  animation: hero-drift 22s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+@keyframes glow-float {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(26px, 18px, 0) scale(1.08);
+  }
+}
+.glow-motion {
+  animation: glow-float 16s ease-in-out infinite alternate;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
