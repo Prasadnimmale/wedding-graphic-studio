@@ -7,7 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/lib/site";
 
 const inter = Inter({
-  variable: "--font-google-sans",
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
 });
