@@ -1,15 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Google_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { site } from "@/lib/site";
 
-const googleSans = Google_Sans({
+const inter = Inter({
   variable: "--font-google-sans",
   subsets: ["latin"],
-  weight: "variable",
   display: "swap",
 });
 
@@ -76,7 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${googleSans.variable} h-full`}
+      className={`${inter.variable} h-full`}
     >
       <body className="flex min-h-full flex-col bg-canvas font-sans text-ink-900 antialiased">
         <a
