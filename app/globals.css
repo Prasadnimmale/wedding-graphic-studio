@@ -2,8 +2,8 @@
 
 @theme inline {
   --font-sans:
-    var(--font-google-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: var(--font-google-sans), ui-sans-serif, system-ui, sans-serif;
+    var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
   /* =============================================================
    * DARK + GOLD design system
