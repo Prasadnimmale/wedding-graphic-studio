@@ -40,11 +40,11 @@ export default function WeddingCards() {
             <div className="absolute -inset-3 rounded-[2rem] border border-gold-300/60" aria-hidden="true" />
             <div className="relative aspect-[16/11] overflow-hidden rounded-2xl bg-canvas shadow-soft">
               <Image
-                src="/images/wedding/invitation-large.webp"
-                alt="Elegant traditional Indian wedding invitation card printed with fine detailing"
+                src="/images/wedding/invitation-foldable.webp"
+                alt="Foldable wedding invitation card printed with fine detailing"
                 fill
                 sizes="(min-width: 1024px) 48vw, 100vw"
-                className="object-cover"
+                className="object-cover object-center"
               />
             </div>
 

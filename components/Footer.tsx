@@ -55,23 +55,20 @@ export default async function Footer() {
         <div className="grid gap-10 lg:grid-cols-12">
           {/* ----------------------------------------------------- brand */}
           <div className="lg:col-span-4">
-            <Link href="/" className="flex items-center gap-3">
+            <Link
+              href="/"
+              className="group inline-flex items-center"
+              aria-label="Bhavani Printing World — home"
+            >
+              {/* Same logo file as the navbar, sized for the footer column. */}
               <Image
-                src="/images/logo.png"
-                alt=""
-                width={701}
-                height={582}
-                sizes="48px"
-                className="h-10 w-auto shrink-0 invert mix-blend-screen transition-transform duration-300 hover:-rotate-3"
+                src="/images/bhavani-printing-world-logo.png"
+                alt="Bhavani Printing World"
+                width={2086}
+                height={754}
+                sizes="(min-width: 640px) 200px, 176px"
+                className="h-14 w-auto object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-16"
               />
-              <span className="flex flex-col leading-none">
-                <span className="text-[15px] font-bold tracking-tight text-white sm:text-[18px]">
-                  Bhavani <span className="text-gradient">Graphics</span>
-                </span>
-                <span className="mt-[4px] text-[9px] font-semibold uppercase tracking-[0.24em] text-gold-300/90 sm:mt-[5px] sm:text-[10px]">
-                  Studio
-                </span>
-              </span>
             </Link>
 
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">{site.tagline}</p>

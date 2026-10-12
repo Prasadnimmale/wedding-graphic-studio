@@ -1,7 +1,8 @@
 # Image credits
 
-All photographs are sourced from Unsplash (Unsplash License: free for commercial and
-non-commercial use, no permission or attribution required).
+Unsplash-sourced photographs use the Unsplash License: free for commercial and
+non-commercial use, no permission or attribution required. User-provided images are
+identified in the table.
 
 https://unsplash.com/license
 
@@ -13,15 +14,34 @@ https://unsplash.com/license
 | public/images/hero/printing-press.webp | https://unsplash.com/photos/1758183961426-88d64eb5f787 |
 | public/images/services/all-printing.webp | https://unsplash.com/photos/1758183961426-88d64eb5f787 |
 | public/images/services/photo-frames.webp | https://unsplash.com/photos/1634630563477-cff9c433c608 |
-| public/images/services/id-cards.webp | https://unsplash.com/photos/1769142726489-6f40b1c575c5 |
-| public/images/services/wedding-cards.webp | https://unsplash.com/photos/1522142833700-f16d02b9e7da |
+| public/images/photoframe.png | User-provided framed Lord Ganesha artwork |
+| public/images/gift-articles-premium.png | User-provided personalized heart-shaped gift box |
+| public/images/gifts/mugs-and-drinkware.png | Cropped from user-provided gift collage (mugs and drinkware) |
+| public/images/gifts/personalized-gifts.png | Cropped from user-provided gift collage (personalized gifts) |
+| public/images/gifts/corporate-gifts.png | Cropped from user-provided gift collage (corporate gifts) |
+| public/images/gifts/photo-frames.png | Cropped from user-provided gift collage (photo frames) |
+| public/images/gifts/home-decor-gifts.png | Cropped from user-provided gift collage (home decor gifts) |
+| public/images/gifts/trophies-and-awards.png | Cropped from user-provided gift collage (trophies and awards) |
+| public/images/gifts/gift-hampers.png | Cropped from user-provided gift collage (gift hampers) |
+| public/images/gifts/keychains-and-accessories.png | Cropped from user-provided gift collage (keychains and accessories) |
+| public/images/services/id-cards-user.png | User-provided printed ID cards with colorful lanyards |
+| public/images/wedding-invitation-premium.jpg | User-provided premium Indian wedding invitation cards (replaces services/wedding-cards.webp) |
+| public/images/wedding-cards/wedding-card-1.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Traditional Gold) |
+| public/images/wedding-cards/wedding-card-2.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Maroon Royal) |
+| public/images/wedding-cards/wedding-card-3.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Pink Floral) |
+| public/images/wedding-cards/wedding-card-4.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Emerald Gold) |
+| public/images/wedding-cards/wedding-card-5.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Temple Peach) |
+| public/images/wedding-cards/wedding-card-6.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Blue Floral) |
+| public/images/wedding-cards/wedding-card-7.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Marigold Traditional) |
+| public/images/wedding-cards/wedding-card-8.jpg | Cropped from user-provided "Sunil & Vinnela Wedding Invitations.png" reference collage (Ocean Blue) |
 | public/images/services/pamphlets.webp | https://unsplash.com/photos/1769893715447-8f12c382e49c |
 | public/images/services/brochures.webp | https://unsplash.com/photos/1695634621121-691d54259d37 |
-| public/images/services/visiting-cards.webp | https://unsplash.com/photos/1718670013921-2f144aba173a |
+| public/images/services/brochures-user.png | User-provided photography brochure stack |
+| public/images/services/visiting-cards-user.png | User-provided black and gold business cards with a butterfly logo |
 | public/images/services/banners-posters.webp | https://unsplash.com/photos/1559613671-dfe2fb6a7680 |
-| public/images/services/photo-printing.webp | https://unsplash.com/photos/1595981234058-a9302fb97229 |
+| public/images/services/photo-printing-user.png | User-provided printed photo keepsakes |
 | public/images/services/gift-articles.webp | https://unsplash.com/photos/1616241673111-508b4662c707 |
-| public/images/services/stickers-labels.webp | https://unsplash.com/photos/1540651810471-5699df74834f |
+| public/images/services/stickers-labels-user.png | User-provided sheets of custom blank product labels |
 | public/images/services/flex-vinyl.webp | https://unsplash.com/photos/1693031630369-bd429a57f115 |
 | public/images/about/studio.webp | https://unsplash.com/photos/1750537735437-847075c29538 |
 | public/images/wedding/invitation-large.webp | https://unsplash.com/photos/1740511310608-f6c09a9cb437 |

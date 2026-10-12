@@ -1,21 +1,22 @@
 import type { Service } from "@/lib/site";
 
-export const services: Service[] = [
+const allServices: Service[] = [
   {
     slug: "photo-frames",
     title: "Photo Frames",
     shortDescription: "Customized photo frames for home, office, gifts and special memories.",
     description:
       "Customised photo frames for home, office, gifts and special memories. Choose from a wide range of sizes and finishes with clear, long-lasting prints that keep your moments looking their best.",
-    image: "/images/services/photo-frames.webp",
-    alt: "Customised photo frame printed for home decor and gifting",
+    image: "/images/photoframe.png",
+    alt: "Framed Lord Ganesha artwork displayed in a home",
     points: ["Multiple sizes and shapes", "Home, office and gifting options", "Clear, long-lasting prints"],
+    premium: true,
     gallery: [
       { image: "/images/gallery/frame-table.webp", alt: "Photo frame placed on a wooden table" },
       { image: "/images/gallery/frame-hand.webp", alt: "Photo frame held in hand" },
       { image: "/images/gallery/photo-collage.webp", alt: "Photo collage of printed pictures on a wall" },
       { image: "/images/gallery/portrait-prints.webp", alt: "Printed portrait photographs" },
-      { image: "/images/services/photo-printing.webp", alt: "Quality printed photographs spread on a table" },
+      { image: "/images/services/photo-printing-user.png", alt: "Printed photo keepsakes arranged on a table" },
       { image: "/images/services/gift-articles.webp", alt: "Customised printed mug gift article" },
       { image: "/images/gifts/personalized.webp", alt: "Wrapped personalised gift box" },
       { image: "/images/gallery/printing-machine.webp", alt: "Printing machine in a print studio" },
@@ -28,14 +29,14 @@ export const services: Service[] = [
     description:
       "Professional ID cards for schools, colleges, offices, organizations and events. Crisp printing, durable card material and clean finishing with lanyards and protective sleeves on request.",
     points: ["Schools, colleges and offices", "Event and staff ID cards", "Lanyards and sleeves available"],
-    image: "/images/services/id-cards.webp",
-    alt: "Printed staff ID cards with lanyards for an office",
+    image: "/images/services/id-cards-user.png",
+    alt: "Printed staff ID cards with colorful lanyards",
     gallery: [
       { image: "/images/gallery/id-badge.webp", alt: "Printed ID badge card" },
-      { image: "/images/services/visiting-cards.webp", alt: "Set of premium visiting cards on a marble surface" },
+      { image: "/images/services/visiting-cards-user.png", alt: "Black and gold business cards with a butterfly logo" },
       { image: "/images/hero/business-cards.webp", alt: "Matte black business cards printed for a professional brand" },
       { image: "/images/business/letterhead.webp", alt: "Printed letterhead and office stationery" },
-      { image: "/images/services/stickers-labels.webp", alt: "Assorted custom printed stickers and labels" },
+      { image: "/images/services/stickers-labels-user.png", alt: "Sheets of custom blank product labels in different sizes" },
       { image: "/images/business/label.webp", alt: "Custom printed product label on packaging" },
       { image: "/images/gallery/cmyk-chart.webp", alt: "CMYK colour calibration chart used in printing" },
       { image: "/images/gallery/printing-machine.webp", alt: "Printing machine in a print studio" },
@@ -48,8 +49,9 @@ export const services: Service[] = [
     description:
       "Beautiful wedding invitations designed and printed for your special day. Traditional Indian designs, modern layouts and premium invitation styles printed on quality paper with elegant finishing.",
     points: ["Traditional Indian wedding cards", "Modern wedding cards", "Premium invitation designs"],
-    image: "/images/services/wedding-cards.webp",
-    alt: "Indian wedding invitation cards with traditional designs",
+    image: "/images/wedding-invitation-premium.jpg",
+    alt: "Premium Indian wedding invitation cards with traditional red and gold designs",
+    premium: true,
     gallery: [
       { image: "/images/wedding/invitation-large.webp", alt: "Traditional Indian wedding invitation card printed with fine detailing" },
       { image: "/images/wedding/traditional.webp", alt: "Ornate traditional wedding card with decorative border" },
@@ -68,8 +70,8 @@ export const services: Service[] = [
     description:
       "Attractive promotional pamphlets for businesses, events, offers and campaigns. Bright colours, readable layouts and quick turnaround for leaflets, handbills and campaign material.",
     points: ["Offers and promotions", "Events and campaigns", "Single side and double side printing"],
-    image: "/images/services/pamphlets.webp",
-    alt: "Printed promotional pamphlets and leaflets",
+    image: "/images/services/brochures-user.png",
+    alt: "Stack of photography brochures featuring event and portrait imagery",
     gallery: [
       { image: "/images/gallery/leaflet.webp", alt: "Colourful printed leaflet held in hand" },
       { image: "/images/business/flyer.webp", alt: "Printed flyer with folded design" },
@@ -96,7 +98,7 @@ export const services: Service[] = [
       { image: "/images/gallery/leaflet.webp", alt: "Colourful printed leaflet held in hand" },
       { image: "/images/business/flyer.webp", alt: "Printed flyer with folded design" },
       { image: "/images/business/letterhead.webp", alt: "Printed letterhead and office stationery" },
-      { image: "/images/services/visiting-cards.webp", alt: "Set of premium visiting cards on a marble surface" },
+      { image: "/images/services/visiting-cards-user.png", alt: "Black and gold business cards with a butterfly logo" },
       { image: "/images/hero/business-cards.webp", alt: "Matte black business cards printed for a professional brand" },
       { image: "/images/gallery/printing-machine.webp", alt: "Printing machine in a print studio" },
     ],
@@ -108,14 +110,14 @@ export const services: Service[] = [
     description:
       "Professional visiting cards that create a strong first impression. Clean layouts, premium paper choices and matte or glossy finishing for businesses, professionals and personal use.",
     points: ["Premium card paper", "Matte and glossy finishing", "Business and personal use"],
-    image: "/images/services/visiting-cards.webp",
-    alt: "Stack of professional visiting cards with clean design",
+    image: "/images/services/visiting-cards-user.png",
+    alt: "Black and gold business cards with a butterfly logo",
     gallery: [
       { image: "/images/hero/business-cards.webp", alt: "Matte black business cards printed for a professional brand" },
       { image: "/images/business/letterhead.webp", alt: "Printed letterhead and office stationery" },
       { image: "/images/business/flyer.webp", alt: "Printed flyer with folded design" },
       { image: "/images/business/label.webp", alt: "Custom printed product label on packaging" },
-      { image: "/images/services/stickers-labels.webp", alt: "Assorted custom printed stickers and labels" },
+      { image: "/images/services/stickers-labels-user.png", alt: "Sheets of custom blank product labels in different sizes" },
       { image: "/images/services/brochures.webp", alt: "Folded professional brochure with printed artwork" },
       { image: "/images/services/pamphlets.webp", alt: "Folded pamphlets and promotional leaflets stacked together" },
       { image: "/images/gallery/cmyk-chart.webp", alt: "CMYK colour calibration chart used in printing" },
@@ -148,8 +150,8 @@ export const services: Service[] = [
     description:
       "Quality photo printing in different sizes for personal and professional use. Accurate colour, sharp detail and neat finishing for albums, portfolios, studio work and everyday prints.",
     points: ["All standard sizes", "Accurate colour reproduction", "Personal and professional prints"],
-    image: "/images/services/photo-printing.webp",
-    alt: "Photo prints in different sizes laid out neatly",
+    image: "/images/services/photo-printing-user.png",
+    alt: "Printed photo keepsakes arranged on a table",
     gallery: [
       { image: "/images/gallery/portrait-prints.webp", alt: "Printed portrait photographs" },
       { image: "/images/gallery/photo-collage.webp", alt: "Photo collage of printed pictures on a wall" },
@@ -168,17 +170,18 @@ export const services: Service[] = [
     description:
       "Customised gift articles designed specially for your loved ones, events and businesses — mugs, keychains, photo gifts, customized bottles and other personalized gifts.",
     points: ["Mugs and keychains", "Photo gifts and bottles", "Personal and corporate gifting"],
-    image: "/images/services/gift-articles.webp",
-    alt: "Personalized photo mug and gift articles printed with custom designs",
+    image: "/images/gift-articles-premium.png",
+    alt: "Personalized red heart-shaped gift box with a keepsake ornament",
+    premium: true,
     gallery: [
-      { image: "/images/gifts/keychain.webp", alt: "Customised metal keychain gift" },
-      { image: "/images/gifts/personalized.webp", alt: "Wrapped personalised gift box" },
-      { image: "/images/gifts/bottle.webp", alt: "Printed personalised bottles" },
-      { image: "/images/gifts/corporate.webp", alt: "Corporate gift boxes with printed branding" },
-      { image: "/images/services/photo-frames.webp", alt: "Customised photo frame placed beside a flower vase" },
-      { image: "/images/gallery/frame-hand.webp", alt: "Photo frame held in hand" },
-      { image: "/images/services/photo-printing.webp", alt: "Quality printed photographs spread on a table" },
-      { image: "/images/gallery/portrait-prints.webp", alt: "Printed portrait photographs" },
+      { image: "/images/gifts/mugs-and-drinkware.png", alt: "Personalized mugs and drinkware gifts", title: "Mugs & Drinkware" },
+      { image: "/images/gifts/personalized-gifts.png", alt: "Personalized photo frame gift", title: "Personalized Gifts" },
+      { image: "/images/gifts/corporate-gifts.png", alt: "Corporate gift set with a notebook, pen and bottle", title: "Corporate Gifts" },
+      { image: "/images/gifts/photo-frames.png", alt: "Personalized photo frames with scenic pictures", title: "Photo Frames" },
+      { image: "/images/gifts/home-decor-gifts.png", alt: "Decorative home gifts with a Buddha figurine and candle holder", title: "Home Decor Gifts" },
+      { image: "/images/gifts/trophies-and-awards.png", alt: "Trophy and crystal awards", title: "Trophies & Awards" },
+      { image: "/images/gifts/gift-hampers.png", alt: "Personalized gift hamper with chocolates and keepsakes", title: "Gift Hampers" },
+      { image: "/images/gifts/keychains-and-accessories.png", alt: "Personalized keychains and accessories", title: "Keychains & Accessories" },
     ],
   },
   {
@@ -188,14 +191,14 @@ export const services: Service[] = [
     description:
       "Custom stickers and labels for businesses, products, packaging and promotions. Die-cut shapes, branding stickers, product labels and packaging stickers printed to your size.",
     points: ["Die-cut and standard shapes", "Product and packaging labels", "Branding and promotional stickers"],
-    image: "/images/services/stickers-labels.webp",
-    alt: "Sheet of custom die-cut stickers and product labels",
+    image: "/images/services/stickers-labels-user.png",
+    alt: "Sheets of custom blank product labels in different sizes",
     gallery: [
       { image: "/images/gallery/sticker-wall.webp", alt: "Assorted custom stickers displayed on a wall" },
       { image: "/images/business/label.webp", alt: "Custom printed product label on packaging" },
       { image: "/images/business/flyer.webp", alt: "Printed flyer with folded design" },
       { image: "/images/services/pamphlets.webp", alt: "Folded pamphlets and promotional leaflets stacked together" },
-      { image: "/images/services/visiting-cards.webp", alt: "Set of premium visiting cards on a marble surface" },
+      { image: "/images/services/visiting-cards-user.png", alt: "Black and gold business cards with a butterfly logo" },
       { image: "/images/gallery/cmyk-chart.webp", alt: "CMYK colour calibration chart used in printing" },
       { image: "/images/gallery/color-swatches.webp", alt: "Colour swatch fan deck for print colour matching" },
       { image: "/images/gallery/printing-machine.webp", alt: "Printing machine in a print studio" },
@@ -242,6 +245,22 @@ export const services: Service[] = [
       { image: "/images/services/gift-articles.webp", alt: "Customised printed mug gift article" },
     ],
   },
+];
+
+/**
+ * Premium services are surfaced first across the site, in this exact order:
+ * Wedding Cards, Photo Frames and Gift Articles. Every other service follows
+ * in the order it is authored above.
+ */
+const premiumSlugs = ["wedding-cards", "photo-frames", "gift-articles"];
+
+const premiumServices = premiumSlugs
+  .map((slug) => allServices.find((service) => service.slug === slug))
+  .filter((service): service is Service => Boolean(service));
+
+export const services: Service[] = [
+  ...premiumServices,
+  ...allServices.filter((service) => !service.premium),
 ];
 
 export const serviceCategories = services

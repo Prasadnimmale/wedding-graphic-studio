@@ -38,14 +38,14 @@ export default function About() {
               eyebrow="About Us"
               title={
                 <>
-                  About <span className="text-gradient">Bhavani Graphics Studio</span>
+                  About <span className="text-gradient">Bhavani Printing World</span>
                 </>
               }
             />
 
             <Reveal delay={0.1}>
               <p className="mt-5 text-base leading-relaxed text-ink-500 sm:text-lg">
-                Bhavani Graphics Studio provides creative design and professional printing solutions
+                Bhavani Printing World provides creative design and professional printing solutions
                 for individuals, businesses, events and special occasions. From simple document
                 printing to customized wedding cards, photo frames, promotional materials and gift
                 articles, we focus on quality, attractive design and reliable service.

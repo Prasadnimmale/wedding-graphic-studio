@@ -4,12 +4,12 @@ import Contact from "@/components/Contact";
 import MapSection from "@/components/MapSection";
 
 export const metadata: Metadata = {
-  title: "Contact | Bhavani Graphics Studio",
+  title: "Contact",
   description:
-    "Get in touch with Bhavani Graphics Studio for printing and design enquiries — request a quote for wedding cards, frames, cards, brochures, banners and customized printing.",
+    "Get in touch with Bhavani Printing World for printing and design enquiries — request a quote for wedding cards, frames, cards, brochures, banners and customized printing.",
   alternates: { canonical: "/contact" },
   openGraph: {
-    title: "Contact Bhavani Graphics Studio",
+    title: "Contact Bhavani Printing World",
     description:
       "Request a quote for printing and design work — share your sizes, quantities and deadline and we'll reply with options.",
     url: "/contact",
@@ -32,7 +32,7 @@ export default function ContactPage() {
             <span className="mx-2 text-slate-300">/</span>
             <span className="font-medium text-ink-900">Contact</span>
           </nav>
-          <h1 className="sr-only">Contact Bhavani Graphics Studio</h1>
+          <h1 className="sr-only">Contact Bhavani Printing World</h1>
         </div>
       </section>
 

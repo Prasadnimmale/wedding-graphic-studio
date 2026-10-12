@@ -25,7 +25,7 @@ export default function CTA() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink-500 sm:text-lg">
             Whether you need wedding cards, business printing, photo frames, ID cards, brochures or
-            customized gifts, Bhavani Graphics Studio is ready to help.
+            customized gifts, Bhavani Printing World is ready to help.
           </p>
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">

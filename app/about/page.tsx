@@ -10,12 +10,12 @@ import SectionHeading from "@/components/SectionHeading";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "About | Bhavani Graphics Studio",
+  title: "About",
   description:
-    "Learn about Bhavani Graphics Studio — a local printing and graphic design studio offering wedding cards, frames, ID cards, brochures, banners and customized printing.",
+    "Learn about Bhavani Printing World — a local printing and graphic design studio offering wedding cards, frames, ID cards, brochures, banners and customized printing.",
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Bhavani Graphics Studio",
+    title: "About Bhavani Printing World",
     description:
       "A local printing and graphic design studio — design, print and personalized products under one roof.",
     url: "/about",

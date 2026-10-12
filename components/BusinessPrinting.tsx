@@ -5,13 +5,13 @@ import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 
 const items = [
-  { label: "Visiting Cards", src: "/images/services/visiting-cards.webp", alt: "Premium visiting cards printed for a business" },
+  { label: "Visiting Cards", src: "/images/services/visiting-cards-user.png", alt: "Black and gold business cards with a butterfly logo" },
   { label: "Letterheads", src: "/images/business/letterhead.webp", alt: "Printed letterhead and office stationery" },
   { label: "Brochures", src: "/images/services/brochures.webp", alt: "Folded professional business brochure" },
   { label: "Flyers", src: "/images/business/flyer.webp", alt: "Printed promotional flyer" },
-  { label: "ID Cards", src: "/images/services/id-cards.webp", alt: "Professional printed ID cards with lanyards" },
+  { label: "ID Cards", src: "/images/services/id-cards-user.png", alt: "Professional printed ID cards with colorful lanyards" },
   { label: "Product Labels", src: "/images/business/label.webp", alt: "Custom printed product label on packaging" },
-  { label: "Stickers", src: "/images/services/stickers-labels.webp", alt: "Custom printed stickers for branding" },
+  { label: "Stickers", src: "/images/services/stickers-labels-user.png", alt: "Sheets of custom blank product labels in different sizes" },
   { label: "Posters", src: "/images/business/poster.webp", alt: "Printed promotional poster on a wall" },
 ];
 

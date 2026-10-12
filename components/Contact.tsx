@@ -65,7 +65,7 @@ function validate(f: Fields): Errors {
 
 function enquiryText(f: Fields) {
   return [
-    "Hello Bhavani Graphics Studio, I'd like a quote.",
+    "Hello Bhavani Printing World, I'd like a quote.",
     "",
     `Name: ${f.name.trim()}`,
     `Phone: ${f.phone.trim()}`,
@@ -90,7 +90,7 @@ export default function Contact() {
   const [lastWaLink, setLastWaLink] = useState("");
 
   const whatsapp = whatsappLink(
-    "Hello Bhavani Graphics Studio, I'd like to know more about your services.",
+    "Hello Bhavani Printing World, I'd like to know more about your services.",
   );
 
   function set(key: keyof Fields, value: string) {

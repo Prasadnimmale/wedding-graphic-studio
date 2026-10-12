@@ -43,7 +43,7 @@ export default function WhyChooseUs() {
           eyebrow="Why Choose Us"
           title={
             <>
-              Why Choose <span className="text-gradient">Bhavani Graphics Studio?</span>
+              Why Choose <span className="text-gradient">Bhavani Printing World?</span>
             </>
           }
           description="Design, printing and finishing handled with the same care — from the first idea to the final delivery."

@@ -8,8 +8,8 @@
  */
 
 export const site = {
-  name: "Bhavani Graphics Studio",
-  shortName: "BGS",
+  name: "Bhavani Printing World",
+  shortName: "BPW",
   tagline: "Creative Designs. Quality Printing. Beautiful Results.",
   supportLine: "From Ideas to Prints — We Make Every Design Special.",
 
@@ -20,12 +20,12 @@ export const site = {
   url: "https://example.com",
 
   description:
-    "Bhavani Graphics Studio provides professional printing and graphic design services including wedding cards, photo frames, ID cards, brochures, pamphlets, visiting cards, gift articles and customized printing.",
+    "Bhavani Printing World provides professional printing and graphic design services including wedding cards, photo frames, ID cards, brochures, pamphlets, visiting cards, gift articles and customized printing.",
 
   /** e.g. "+91 98765 43210" — leave empty until the real number is available. */
   phone: "+91 96766 69474",
 
-  /** e.g. "hello@bhavanigraphics.com" — leave empty until the real inbox exists. */
+  /** e.g. "hello@bhavaniprintingworld.com" — leave empty until the real inbox exists. */
   email: "",
 
   /** Full shop address — leave empty until the real address is available. */
@@ -44,7 +44,7 @@ export const site = {
 
   /** Pre-filled WhatsApp message used by the floating button and CTA. */
   whatsappMessage:
-    "Hello Bhavani Graphics Studio, I would like to know about your printing services.",
+    "Hello Bhavani Printing World, I would like to know about your printing services.",
 
   /** Social profiles — leave empty until the real accounts exist (hidden when empty). */
   social: {
@@ -77,9 +77,11 @@ export type Service = {
   image: string;
   alt: string;
   points?: string[];
+  /** Surfaced first, with a richer highlighted card, on the services grid. */
+  premium?: boolean;
   featured?: boolean;
   /** Related work shown as a grid of images under the service detail block. */
-  gallery?: { image: string; alt: string }[];
+  gallery?: { image: string; alt: string; title?: string }[];
 };
 
 export const navLinks = [

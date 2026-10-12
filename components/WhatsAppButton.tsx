@@ -13,7 +13,7 @@ export default function WhatsAppButton() {
       href={whatsappLink()}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Chat with Bhavani Graphics Studio on WhatsApp"
+      aria-label="Chat with Bhavani Printing World on WhatsApp"
       title="Chat with us on WhatsApp"
       className="group fixed bottom-4 right-4 z-[100] flex h-[52px] w-[52px] items-center justify-center rounded-full bg-[#25D366] shadow-[0_10px_28px_-10px_rgba(37,211,102,0.55)] transition-all duration-200 ease-out hover:scale-[1.08] hover:shadow-[0_14px_34px_-8px_rgba(37,211,102,0.8)] sm:bottom-6 sm:right-6 sm:h-[58px] sm:w-[58px]"
     >

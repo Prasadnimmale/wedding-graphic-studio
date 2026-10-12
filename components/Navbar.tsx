@@ -5,8 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { navLinks } from "@/lib/site";
+import { services } from "@/data/services";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -58,49 +59,96 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="group flex items-center gap-3" aria-label="Bhavani Graphics Studio — home">
+        <Link
+          href="/"
+          className="group flex shrink-0 items-center"
+          aria-label="Bhavani Printing World — home"
+        >
+          {/* Brand logo — the exact artwork, never recoloured or distorted.
+              Sized by height (w-auto keeps the aspect ratio) so it stays
+              crisp and never crowds the nav links or the mobile menu. */}
           <Image
-            src="/images/logo.png"
-            alt=""
-            width={701}
-            height={582}
-            priority
-            sizes="48px"
-            className="h-10 w-auto shrink-0 invert mix-blend-screen transition-transform duration-300 group-hover:-rotate-3"
+            src="/images/bhavani-printing-world-logo.png"
+            alt="Bhavani Printing World"
+            width={2086}
+            height={754}
+            preload
+            sizes="(min-width: 1024px) 160px, (min-width: 640px) 140px, 128px"
+            className="h-11 w-auto max-w-full object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-12 lg:h-14"
           />
-          <span className="flex flex-col leading-none">
-            <span className="text-[15px] font-bold tracking-tight text-white sm:text-[18px]">
-              Bhavani <span className="text-gradient">Graphics</span>
-            </span>
-            <span className="mt-[4px] text-[9px] font-semibold uppercase tracking-[0.24em] text-gold-300/90 sm:mt-[5px] sm:text-[10px]">
-              Studio
-            </span>
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Main navigation">
-          {navLinks.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${
-                isActive(link.href)
-                  ? "text-brand-700"
-                  : link.label === "Our Work"
-                    ? "text-white hover:bg-brand-50 hover:text-brand-700"
-                    : "text-ink-700 hover:bg-brand-50 hover:text-brand-700"
-              }`}
-            >
-              {link.label}
-              {isActive(link.href) && (
-                <motion.span
-                  layoutId="nav-underline"
-                  className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-brand-gradient"
-                  transition={{ type: "spring", stiffness: 400, damping: 32 }}
-                />
-              )}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.label === "Services" ? (
+              <details key={link.label} className="group relative">
+                <summary
+                  className={`relative flex cursor-pointer list-none items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200 [&::-webkit-details-marker]:hidden ${
+                    isActive(link.href)
+                      ? "text-brand-700"
+                      : "text-ink-700 hover:bg-brand-50 hover:text-brand-700"
+                  }`}
+                >
+                  Services
+                  <ChevronDown className="h-4 w-4" aria-hidden />
+                  {isActive(link.href) && (
+                    <motion.span
+                      layoutId="nav-underline"
+                      className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-brand-gradient"
+                      transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                    />
+                  )}
+                </summary>
+                <div className="absolute left-0 top-full z-50 mt-2 max-h-[70vh] w-72 overflow-y-auto rounded-2xl border border-line bg-surface p-2 shadow-lift">
+                  <Link
+                    href={link.href}
+                    onClick={(event) => {
+                      const details = event.currentTarget.closest("details");
+                      if (details) details.open = false;
+                    }}
+                    className="block rounded-xl px-3 py-2.5 text-sm font-semibold text-gold-300 transition-colors hover:bg-white/[0.05]"
+                  >
+                    All Services
+                  </Link>
+                  <div className="my-1 border-t border-line" />
+                  {services.map((service) => (
+                    <Link
+                      key={service.slug}
+                      href={`/services#${service.slug}`}
+                      onClick={(event) => {
+                        const details = event.currentTarget.closest("details");
+                        if (details) details.open = false;
+                      }}
+                      className="block rounded-xl px-3 py-2 text-sm text-ink-700 transition-colors hover:bg-white/[0.05] hover:text-brand-700"
+                    >
+                      {service.title}
+                    </Link>
+                  ))}
+                </div>
+              </details>
+            ) : (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors duration-200 ${
+                  isActive(link.href)
+                    ? "text-brand-700"
+                    : link.label === "Our Work"
+                      ? "text-white hover:bg-brand-50 hover:text-brand-700"
+                      : "text-ink-700 hover:bg-brand-50 hover:text-brand-700"
+                }`}
+              >
+                {link.label}
+                {isActive(link.href) && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-brand-gradient"
+                    transition={{ type: "spring", stiffness: 400, damping: 32 }}
+                  />
+                )}
+              </Link>
+            ),
+          )}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -134,23 +182,65 @@ export default function Navbar() {
             className="overflow-hidden border-t border-line bg-surface lg:hidden"
           >
             <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4 sm:px-6" aria-label="Mobile navigation">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setOpen(false)}
-                  className={`flex items-center justify-between rounded-xl px-4 py-3 text-[15px] font-medium transition-colors ${
-                    isActive(link.href)
-                      ? "bg-brand-50 text-brand-700"
-                      : link.label === "Our Work"
-                        ? "text-white hover:bg-white/[0.05]"
-                        : "text-ink-700 hover:bg-white/[0.05]"
-                  }`}
-                >
-                  {link.label}
-                  <ArrowRight className="h-4 w-4 opacity-40" />
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.label === "Services" ? (
+                  <details key={link.label} className="group">
+                    <summary
+                      className={`flex cursor-pointer list-none items-center justify-between rounded-xl px-4 py-3 text-[15px] font-medium transition-colors [&::-webkit-details-marker]:hidden ${
+                        isActive(link.href)
+                          ? "bg-brand-50 text-brand-700"
+                          : "text-ink-700 hover:bg-white/[0.05]"
+                      }`}
+                    >
+                      Services
+                      <ChevronDown className="h-4 w-4 opacity-60" aria-hidden />
+                    </summary>
+                    <div className="ml-4 mt-1 border-l border-line pl-3">
+                      <Link
+                        href={link.href}
+                        onClick={(event) => {
+                          setOpen(false);
+                          const details = event.currentTarget.closest("details");
+                          if (details) details.open = false;
+                        }}
+                        className="block rounded-lg px-3 py-2 text-sm font-semibold text-gold-300"
+                      >
+                        All Services
+                      </Link>
+                      {services.map((service) => (
+                        <Link
+                          key={service.slug}
+                          href={`/services#${service.slug}`}
+                          onClick={(event) => {
+                            setOpen(false);
+                            const details = event.currentTarget.closest("details");
+                            if (details) details.open = false;
+                          }}
+                          className="block rounded-lg px-3 py-2 text-sm text-ink-700 transition-colors hover:bg-white/[0.05]"
+                        >
+                          {service.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 text-[15px] font-medium transition-colors ${
+                      isActive(link.href)
+                        ? "bg-brand-50 text-brand-700"
+                        : link.label === "Our Work"
+                          ? "text-white hover:bg-white/[0.05]"
+                          : "text-ink-700 hover:bg-white/[0.05]"
+                    }`}
+                  >
+                    {link.label}
+                    <ArrowRight className="h-4 w-4 opacity-40" />
+                  </Link>
+                ),
+              )}
               <Link
                 href="/contact#enquiry"
                 onClick={() => setOpen(false)}

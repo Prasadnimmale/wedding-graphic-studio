@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: site.description,
   applicationName: site.name,
   keywords: [
-    "Bhavani Graphics Studio",
+    "Bhavani Printing World",
     "printing services",
     "graphic design",
     "wedding cards",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
         url: "/images/og-cover.jpg",
         width: 1200,
         height: 630,
-        alt: "Bhavani Graphics Studio — printing and graphic design studio",
+        alt: "Bhavani Printing World — printing and graphic design studio",
       },
     ],
   },

@@ -5,12 +5,12 @@ import Gallery from "@/components/Gallery";
 import CTA from "@/components/CTA";
 
 export const metadata: Metadata = {
-  title: "Gallery — Our Work | Bhavani Graphics Studio",
+  title: "Gallery — Our Work",
   description:
     "See our printing work — wedding cards, photo frames, ID cards, visiting cards, brochures, pamphlets, gift articles, posters and everyday printing.",
   alternates: { canonical: "/gallery" },
   openGraph: {
-    title: "Our Work | Bhavani Graphics Studio",
+    title: "Our Work | Bhavani Printing World",
     description:
       "Wedding cards, frames, ID cards, visiting cards, brochures, pamphlets, posters and more — a look at what we print.",
     url: "/gallery",
@@ -33,7 +33,7 @@ export default function GalleryPage() {
             <span className="mx-2 text-slate-300">/</span>
             <span className="font-medium text-ink-900">Our Work</span>
           </nav>
-          <h1 className="sr-only">Our Work — printing gallery | Bhavani Graphics Studio</h1>
+          <h1 className="sr-only">Our Work — printing gallery | Bhavani Printing World</h1>
         </div>
       </section>
 

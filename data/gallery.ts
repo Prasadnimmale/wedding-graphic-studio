@@ -77,11 +77,11 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "wedding-card-clean",
-    title: "Elegant Wedding Card",
+    title: "Premium Wedding Invitation",
     category: "wedding",
     categoryLabel: "Wedding Cards",
-    image: "/images/services/wedding-cards.webp",
-    alt: "Elegant wedding invitation card printed on premium paper",
+    image: "/images/wedding-invitation-premium.jpg",
+    alt: "Premium Indian wedding invitation cards with traditional red and gold designs",
   },
 
   {
@@ -123,8 +123,8 @@ export const galleryItems: GalleryItem[] = [
     title: "Staff ID Cards",
     category: "id-cards",
     categoryLabel: "ID Cards",
-    image: "/images/services/id-cards.webp",
-    alt: "Printed identity cards attached to lanyards",
+    image: "/images/services/id-cards-user.png",
+    alt: "Printed identity cards attached to colorful lanyards",
   },
   {
     id: "id-badge",
@@ -140,8 +140,8 @@ export const galleryItems: GalleryItem[] = [
     title: "Premium Visiting Cards",
     category: "visiting-cards",
     categoryLabel: "Visiting Cards",
-    image: "/images/services/visiting-cards.webp",
-    alt: "Set of premium visiting cards on a marble surface",
+    image: "/images/services/visiting-cards-user.png",
+    alt: "Black and gold business cards with a butterfly logo",
     shape: "wide",
   },
   {
@@ -175,8 +175,8 @@ export const galleryItems: GalleryItem[] = [
     title: "Promotional Pamphlets",
     category: "pamphlets",
     categoryLabel: "Pamphlets",
-    image: "/images/services/pamphlets.webp",
-    alt: "Folded pamphlets and promotional leaflets stacked together",
+    image: "/images/services/brochures-user.png",
+    alt: "Stack of photography brochures featuring event and portrait imagery",
   },
   {
     id: "pamphlet-hand",
@@ -308,16 +308,16 @@ export const galleryItems: GalleryItem[] = [
     title: "Stickers & Labels",
     category: "printing",
     categoryLabel: "Printing",
-    image: "/images/services/stickers-labels.webp",
-    alt: "Assorted custom printed stickers and labels",
+    image: "/images/services/stickers-labels-user.png",
+    alt: "Sheets of custom blank product labels in different sizes",
   },
   {
     id: "photo-prints",
     title: "Photo Prints",
     category: "printing",
     categoryLabel: "Printing",
-    image: "/images/services/photo-printing.webp",
-    alt: "Quality printed photographs spread on a table",
+    image: "/images/services/photo-printing-user.png",
+    alt: "Printed photo keepsakes arranged on a table",
   },
   {
     id: "letterhead",

@@ -1,19 +1,22 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { services } from "@/data/services";
 import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
-import { site } from "@/lib/site";
+import PhotoFrameGallery from "@/components/PhotoFrameGallery";
+import WeddingCardGallery from "@/components/WeddingCardGallery";
+import { site, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Printing Services | Bhavani Graphics Studio",
+  title: "Printing Services",
   description:
     "Explore our printing services — photo frames, ID cards, wedding cards, pamphlets, brochures, visiting cards, banners, photo printing, gift articles, stickers, flex printing and more.",
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "Printing Services | Bhavani Graphics Studio",
+    title: "Printing Services | Bhavani Printing World",
     description:
       "Photo frames, wedding cards, ID cards, brochures, banners, stickers, flex printing and more — design and print under one roof.",
     url: "/services",
@@ -57,7 +60,11 @@ export default function ServicesPage() {
                 <li key={service.slug}>
                   <a
                     href={`#${service.slug}`}
-                    className="inline-flex rounded-full border border-line bg-surface px-4 py-2 text-sm font-medium text-ink-700 transition hover:border-gold-500/40 hover:bg-brand-50 hover:text-gold-300"
+                    className={`inline-flex rounded-full border px-4 py-2 text-sm font-medium transition hover:bg-brand-50 hover:text-gold-300 ${
+                      service.premium
+                        ? "border-gold-500/45 bg-brand-50 text-gold-300"
+                        : "border-line bg-surface text-ink-700 hover:border-gold-500/40"
+                    }`}
                   >
                     {service.title}
                   </a>
@@ -77,7 +84,9 @@ export default function ServicesPage() {
               <article
                 key={service.slug}
                 id={service.slug}
-                className="scroll-mt-28 overflow-hidden rounded-3xl border border-line bg-surface shadow-[0_24px_60px_-45px_rgba(0,0,0,0.7)]"
+                className={`scroll-mt-28 overflow-hidden rounded-3xl border bg-surface shadow-[0_24px_60px_-45px_rgba(0,0,0,0.7)] ${
+                  service.premium ? "border-gold-500/40 ring-1 ring-gold-500/20" : "border-line"
+                }`}
               >
                 <div className="grid lg:grid-cols-2">
                   <div
@@ -88,8 +97,14 @@ export default function ServicesPage() {
                       alt={service.alt}
                       fill
                       sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="object-cover"
+                      className="object-cover object-center"
                     />
+                    {service.premium && (
+                      <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-gold-300 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-black shadow-lg">
+                        <Sparkles className="h-3.5 w-3.5" aria-hidden />
+                        Premium
+                      </span>
+                    )}
                     {service.featured && (
                       <span className="absolute left-4 top-4 rounded-full bg-brand-gradient px-3 py-1 text-[11px] font-bold uppercase tracking-[0.16em] text-white shadow-lg">
                         Most requested
@@ -143,34 +158,86 @@ export default function ServicesPage() {
                   </div>
                 </div>
 
-                {/* Eight related-work images for this service */}
-                {service.gallery && service.gallery.length > 0 && (
+                {/* Work gallery for this service */}
+                {service.slug === "wedding-cards" || service.slug === "photo-frames" ? (
                   <div className="border-t border-line/60 bg-black/25 p-5 sm:p-6">
-                    <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold-400/90">
-                        More {service.title} work
-                      </p>
-                      <span className="text-[11px] uppercase tracking-[0.14em] text-ink-400">
-                        {service.gallery.length} photos
-                      </span>
-                    </div>
-                    <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-                      {service.gallery.map((item) => (
-                        <li
-                          key={item.image}
-                          className="group/tile relative aspect-[4/3] overflow-hidden rounded-xl bg-canvas ring-1 ring-white/5"
-                        >
-                          <Image
-                            src={item.image}
-                            alt={item.alt}
-                            fill
-                            sizes="(min-width: 1024px) 22vw, (min-width: 640px) 25vw, 50vw"
-                            className="object-cover transition-transform duration-500 ease-out group-hover/tile:scale-105"
-                          />
-                        </li>
-                      ))}
-                    </ul>
+                    {service.slug === "wedding-cards" ? (
+                      <WeddingCardGallery />
+                    ) : (
+                      <PhotoFrameGallery />
+                    )}
                   </div>
+                ) : (
+                  service.gallery &&
+                  service.gallery.length > 0 && (
+                    <div className="border-t border-line/60 bg-black/25 p-5 sm:p-6">
+                      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold-400/90">
+                          More {service.title} work
+                        </p>
+                        <span className="text-[11px] uppercase tracking-[0.14em] text-ink-400">
+                          {service.gallery.length} photos
+                        </span>
+                      </div>
+                      <ul
+                        className={`grid gap-x-4 gap-y-8 ${
+                          service.slug === "gift-articles"
+                            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+                            : "grid-cols-2 sm:grid-cols-4"
+                        }`}
+                      >
+                        {service.gallery.map((item) => (
+                          <li
+                            key={item.image}
+                            className={
+                              service.slug === "gift-articles"
+                                ? "group/tile flex flex-col"
+                                : "group/tile relative aspect-[4/3] overflow-hidden rounded-xl bg-canvas ring-1 ring-white/5"
+                            }
+                          >
+                            {service.slug === "gift-articles" && item.title ? (
+                              <>
+                                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-surface shadow-soft ring-1 ring-gold-500/25 transition-all duration-300 group-hover/tile:-translate-y-1 group-hover/tile:shadow-lift group-hover/tile:ring-gold-400/70">
+                                  <Image
+                                    src={item.image}
+                                    alt={item.alt}
+                                    fill
+                                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                                    className="object-contain transition-transform duration-700 ease-out group-hover/tile:scale-[1.06]"
+                                  />
+                                </div>
+                                <div className="mt-4 flex flex-1 flex-col">
+                                  <h3 className="font-display text-[15px] font-bold leading-snug text-ink-950">
+                                    {item.title}
+                                  </h3>
+                                  <a
+                                    href={whatsappLink(
+                                      `Hello Bhavani Printing World, I am interested in ${item.title}. Please share details and pricing.`,
+                                    )}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={`Enquire about ${item.title} on WhatsApp`}
+                                    className="mt-4 inline-flex min-h-[46px] w-full items-center justify-center gap-2.5 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-bold shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift"
+                                  >
+                                    <FaWhatsapp className="h-[17px] w-[17px]" aria-hidden="true" />
+                                    Enquire on WhatsApp
+                                  </a>
+                                </div>
+                              </>
+                            ) : (
+                              <Image
+                                src={item.image}
+                                alt={item.alt}
+                                fill
+                                sizes="(min-width: 1024px) 22vw, (min-width: 640px) 25vw, 50vw"
+                                className="object-cover transition-transform duration-500 ease-out group-hover/tile:scale-105"
+                              />
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
                 )}
               </article>
             );

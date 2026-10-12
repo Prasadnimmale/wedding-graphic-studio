@@ -9,8 +9,8 @@ const collage = [
   { src: "/images/services/photo-frames.webp", alt: "Customised photo frame", className: "" },
   { src: "/images/services/gift-articles.webp", alt: "Customized printed mug", className: "" },
   { src: "/images/services/brochures.webp", alt: "Custom printed brochure", className: "" },
-  { src: "/images/services/id-cards.webp", alt: "Custom printed ID cards", className: "" },
-  { src: "/images/services/stickers-labels.webp", alt: "Custom printed stickers", className: "" },
+  { src: "/images/services/id-cards-user.png", alt: "Custom printed ID cards with colorful lanyards", className: "" },
+  { src: "/images/services/stickers-labels-user.png", alt: "Sheets of custom blank product labels in different sizes", className: "" },
 ];
 
 export default function CustomPrinting() {

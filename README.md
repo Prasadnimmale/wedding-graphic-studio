@@ -1,4 +1,4 @@
-# Bhavani Graphics Studio — Website
+# Bhavani Printing World — Website
 
 Modern, responsive marketing site for a local printing & graphic design studio.
 
@@ -87,7 +87,7 @@ Source photos are cached in `scripts/.cache/`. Credits/licensing notes: `IMAGES.
 
 ## SEO
 
-- Title: **Bhavani Graphics Studio | Printing & Graphic Design Services**
+- Title: **Bhavani Printing World | Printing & Graphic Design Services**
 - Meta description, canonical URLs, Open Graph + Twitter cards (cover image:
   `public/images/og-cover.jpg`)
 - `robots.txt` + `sitemap.xml` generated from `app/robots.ts` / `app/sitemap.ts`
