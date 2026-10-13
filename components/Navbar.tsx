@@ -11,7 +11,6 @@ import { services } from "@/data/services";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const [hash, setHash] = useState("");
   const pathname = usePathname();
 
@@ -22,13 +21,6 @@ export default function Navbar() {
     setLastPathname(pathname);
     setOpen(false);
   }
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   useEffect(() => {
     const onHashChange = () => setHash(window.location.hash);
@@ -51,13 +43,7 @@ export default function Navbar() {
   };
 
   return (
-    <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "border-b border-line bg-black/85 shadow-[0_10px_30px_-24px_rgba(0,0,0,0.8)] backdrop-blur-md"
-          : "border-b border-white/5 bg-black/55 backdrop-blur-sm"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-canvas shadow-[0_10px_30px_-24px_rgba(0,0,0,0.8)]">
       <div className="mx-auto flex h-[72px] max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link
           href="/"
@@ -134,7 +120,7 @@ export default function Navbar() {
                   isActive(link.href)
                     ? "text-brand-700"
                     : link.label === "Our Work"
-                      ? "text-white hover:bg-brand-50 hover:text-brand-700"
+                      ? "text-ink-700 hover:bg-brand-50 hover:text-brand-700"
                       : "text-ink-700 hover:bg-brand-50 hover:text-brand-700"
                 }`}
               >
@@ -232,7 +218,7 @@ export default function Navbar() {
                       isActive(link.href)
                         ? "bg-brand-50 text-brand-700"
                         : link.label === "Our Work"
-                          ? "text-white hover:bg-white/[0.05]"
+                          ? "text-ink-700 hover:bg-white/[0.05]"
                           : "text-ink-700 hover:bg-white/[0.05]"
                     }`}
                   >

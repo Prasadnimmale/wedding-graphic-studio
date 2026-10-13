@@ -30,8 +30,9 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-canvas">
       {/* Full-bleed print-studio backdrop: a real printing machine running
           as a muted looping video, layered over the still frame (which keeps
-          its slow Ken Burns drift as the fallback) and darkened in layers so
-          the black + gold copy stays readable on top of it. */}
+          its slow Ken Burns drift as the fallback). No colour tint — the
+          video shows straight through; only neutral black gradients remain
+          on the left/bottom so the copy stays readable. */}
       <Image
         src="/images/gallery/printing-machine.webp"
         alt=""
@@ -54,14 +55,10 @@ export default function Hero() {
       >
         <source src="/videos/hero-printing.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-black/55" />
-      <div className="absolute inset-0 bg-gradient-to-r from-canvas/95 via-canvas/55 to-canvas/5" />
-      <div className="absolute inset-0 bg-gradient-to-b from-canvas/70 via-transparent to-canvas" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-canvas" />
 
-      <div className="glow glow-motion -left-32 -top-40 h-[420px] w-[420px] bg-brand-300/50" />
-      <div className="glow glow-motion -right-24 top-24 h-[380px] w-[380px] bg-royal-200/60" />
-
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.02fr_1fr] lg:gap-14 lg:px-8 lg:py-24">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 pb-14 pt-28 sm:px-6 sm:pb-20 sm:pt-32 lg:grid-cols-[1.02fr_1fr] lg:gap-14 lg:px-8 lg:pb-24 lg:pt-32">
         {/* ---------------------------------------------------------- copy */}
         <div>
           <motion.div
@@ -69,8 +66,8 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            <span className="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-brand-50 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-gold-300">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold-500" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.22em] text-slate-200">
+              <span className="h-1.5 w-1.5 rounded-full bg-slate-200" />
               Bhavani Printing World
             </span>
           </motion.div>
@@ -83,7 +80,7 @@ export default function Hero() {
           >
             Creative Designs.
             <br />
-            <span className="text-gradient">Quality Printing.</span>
+            <span className="text-ink-950">Quality Printing.</span>
             <br />
             Beautiful Results.
           </motion.h1>
@@ -92,7 +89,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-6 max-w-xl text-base leading-relaxed text-ink-500 sm:text-lg"
+            className="mt-6 max-w-xl text-base leading-relaxed text-ink-700 sm:text-lg"
           >
             Your one-stop destination for professional graphic design, digital printing, photo
             frames, wedding cards, ID cards, brochures, pamphlets, customized gifts and all types
@@ -107,14 +104,14 @@ export default function Hero() {
           >
             <Link
               href="/services"
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-brand-gradient px-7 py-3.5 text-sm font-semibold text-white shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift sm:text-base"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-black shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-200 hover:shadow-lift sm:text-base"
             >
               View Services
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
               href="/contact#enquiry"
-              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-gold-500/40 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-gold-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-400 hover:bg-brand-50 sm:text-base"
+              className="group inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full border border-white/40 bg-white/[0.03] px-7 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/70 hover:bg-white/10 sm:text-base"
             >
               Get a Quote
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5" />
@@ -132,7 +129,7 @@ export default function Hero() {
                 key={pill}
                 className="inline-flex items-center gap-1.5 rounded-full border border-line bg-white/[0.04] px-3.5 py-1.5 text-xs font-medium text-ink-700"
               >
-                <Sparkles className="h-3.5 w-3.5 text-gold-500" />
+                <Sparkles className="h-3.5 w-3.5 text-slate-400" />
                 {pill}
               </li>
             ))}

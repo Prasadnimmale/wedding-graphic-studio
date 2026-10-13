@@ -22,11 +22,11 @@ export default function About() {
           <Reveal className="relative">
             <div className="relative aspect-square overflow-hidden rounded-3xl bg-surface shadow-soft ring-1 ring-white/10">
               <Image
-                src="/images/about/wedding-cards.webp"
+                src="/images/about/about.jpg"
                 alt="Elegant wedding invitation set featuring a peacock design and white orchids on a marble background"
                 fill
                 sizes="(min-width: 1024px) 48vw, 100vw"
-                className="object-cover"
+                className="object-contain"
               />
             </div>
           </Reveal>

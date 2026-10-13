@@ -2,13 +2,28 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
 import { services } from "@/data/services";
 import CTA from "@/components/CTA";
 import Reveal from "@/components/Reveal";
-import PhotoFrameGallery from "@/components/PhotoFrameGallery";
-import WeddingCardGallery from "@/components/WeddingCardGallery";
+import ServiceGallery from "@/components/ServiceGallery";
 import { site, whatsappLink } from "@/lib/site";
+
+/** Per-gallery local placeholder shown when a tile image cannot load. */
+const portfolioFallback: Record<string, string> = {
+  pamphlets: "/images/pamphlets/fallback.svg",
+  "id-cards": "/images/id-cards/fallback.svg",
+  brochures: "/images/brochures/fallback.svg",
+  "visiting-cards": "/images/visiting-cards/fallback.svg",
+  "banners-posters": "/images/banners-posters/fallback.svg",
+  "photo-printing": "/images/photo-printing/fallback.svg",
+  "stickers-labels": "/images/stickers-labels/fallback.svg",
+  "flex-vinyl-printing": "/images/flex-vinyl-printing/fallback.svg",
+};
+
+/** Per-service override for the work-gallery heading (default: "More <title> work"). */
+const galleryHeading: Record<string, string> = {
+  "flex-vinyl-printing": "Flex & Vinyl Printing Designs",
+};
 
 export const metadata: Metadata = {
   title: "Printing Services",
@@ -159,85 +174,35 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Work gallery for this service */}
-                {service.slug === "wedding-cards" || service.slug === "photo-frames" ? (
+                {service.gallery && service.gallery.length > 0 && (
                   <div className="border-t border-line/60 bg-black/25 p-5 sm:p-6">
-                    {service.slug === "wedding-cards" ? (
-                      <WeddingCardGallery />
-                    ) : (
-                      <PhotoFrameGallery />
-                    )}
-                  </div>
-                ) : (
-                  service.gallery &&
-                  service.gallery.length > 0 && (
-                    <div className="border-t border-line/60 bg-black/25 p-5 sm:p-6">
-                      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-                        <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold-400/90">
-                          More {service.title} work
-                        </p>
-                        <span className="text-[11px] uppercase tracking-[0.14em] text-ink-400">
-                          {service.gallery.length} photos
-                        </span>
-                      </div>
-                      <ul
-                        className={`grid gap-x-4 gap-y-8 ${
-                          service.slug === "gift-articles"
-                            ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-                            : "grid-cols-2 sm:grid-cols-4"
-                        }`}
-                      >
-                        {service.gallery.map((item) => (
-                          <li
-                            key={item.image}
-                            className={
-                              service.slug === "gift-articles"
-                                ? "group/tile flex flex-col"
-                                : "group/tile relative aspect-[4/3] overflow-hidden rounded-xl bg-canvas ring-1 ring-white/5"
-                            }
-                          >
-                            {service.slug === "gift-articles" && item.title ? (
-                              <>
-                                <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl bg-surface shadow-soft ring-1 ring-gold-500/25 transition-all duration-300 group-hover/tile:-translate-y-1 group-hover/tile:shadow-lift group-hover/tile:ring-gold-400/70">
-                                  <Image
-                                    src={item.image}
-                                    alt={item.alt}
-                                    fill
-                                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-                                    className="object-contain transition-transform duration-700 ease-out group-hover/tile:scale-[1.06]"
-                                  />
-                                </div>
-                                <div className="mt-4 flex flex-1 flex-col">
-                                  <h3 className="font-display text-[15px] font-bold leading-snug text-ink-950">
-                                    {item.title}
-                                  </h3>
-                                  <a
-                                    href={whatsappLink(
-                                      `Hello Bhavani Printing World, I am interested in ${item.title}. Please share details and pricing.`,
-                                    )}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={`Enquire about ${item.title} on WhatsApp`}
-                                    className="mt-4 inline-flex min-h-[46px] w-full items-center justify-center gap-2.5 rounded-full bg-brand-gradient px-5 py-2.5 text-sm font-bold shadow-soft transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lift"
-                                  >
-                                    <FaWhatsapp className="h-[17px] w-[17px]" aria-hidden="true" />
-                                    Enquire on WhatsApp
-                                  </a>
-                                </div>
-                              </>
-                            ) : (
-                              <Image
-                                src={item.image}
-                                alt={item.alt}
-                                fill
-                                sizes="(min-width: 1024px) 22vw, (min-width: 640px) 25vw, 50vw"
-                                className="object-cover transition-transform duration-500 ease-out group-hover/tile:scale-105"
-                              />
-                            )}
-                          </li>
-                        ))}
-                      </ul>
+                    <div className="mb-5 flex items-center justify-between gap-3">
+                      <h3 className="font-display text-base font-bold text-ink-950 sm:text-lg">
+                        {galleryHeading[service.slug] ?? `${service.title} Gallery`}
+                      </h3>
+                      <span className="shrink-0 text-xs font-medium text-ink-500">
+                        {service.gallery.length} photos
+                      </span>
                     </div>
-                  )
+                    <ServiceGallery
+                      items={service.gallery.map((item) => {
+                        const title = item.title ?? item.alt;
+                        const message =
+                          item.waMessage ??
+                          `Hello ${site.name}, I am interested in ${service.title}: ${title}. Please share details and pricing.`;
+
+                        return {
+                          image: item.image,
+                          alt: item.alt,
+                          title,
+                          description: item.description,
+                          fallback: portfolioFallback[service.slug],
+                          wa: whatsappLink(message),
+                        };
+                      })}
+                      fit={service.slug === "photo-printing" ? "cover" : "contain"}
+                    />
+                  </div>
                 )}
               </article>
             );

@@ -81,7 +81,14 @@ export type Service = {
   premium?: boolean;
   featured?: boolean;
   /** Related work shown as a grid of images under the service detail block. */
-  gallery?: { image: string; alt: string; title?: string }[];
+  gallery?: {
+    image: string;
+    alt: string;
+    title?: string;
+    description?: string;
+    /** Explicit WhatsApp message for this design (overrides the default template). */
+    waMessage?: string;
+  }[];
 };
 
 export const navLinks = [

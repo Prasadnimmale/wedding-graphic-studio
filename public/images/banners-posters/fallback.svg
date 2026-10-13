@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#eef1f6"/>
+  <rect x="120" y="120" width="560" height="200" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="160" y="160" width="300" height="18" rx="9" fill="#cbd5e1"/>
+  <rect x="160" y="196" width="220" height="14" rx="7" fill="#e2e8f0"/>
+  <rect x="120" y="360" width="560" height="120" rx="12" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <rect x="160" y="392" width="180" height="12" rx="6" fill="#cbd5e1"/>
+  <text x="400" y="560" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#475569" text-anchor="middle">Banner &amp; Poster Design</text>
+  <text x="400" y="580" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Image unavailable</text>
+</svg>
